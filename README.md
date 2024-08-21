@@ -27,9 +27,17 @@ This is a Flask web application that generates Instagram feeds.
    ```bash
    poetry install
 
- ### Running the application
 
-```bash
-python app.py
+### Running the Application
 
-This will start the development server, and you can access the application by navigating to http://localhost:5000/register.
+   ```bash
+   python app.py
+   ```
+
+   This will start the development server, and you can access the application by navigating to http://localhost:5000/register.
+
+### License
+
+This project is licensed under the MIT License.
+
+
