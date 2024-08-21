@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "ig-feed-generator"
+version = "0.1.0"
+description = ""
+authors = ["mukund1712 <143148571+mukund1712@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Flask = "^3.0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
