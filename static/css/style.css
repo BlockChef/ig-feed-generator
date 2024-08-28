@@ -4,91 +4,59 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light background color for the whole page */
+    background-color: #f4f4f4;
 }
 
-/* Container */
 .container {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background: #fff; /* White background for the form container */
+    background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fffbf0; /* Soft light yellow background for the container */
+    background-color: #fffbf0;
 }
 
-/* Header */
 h1 {
     color: #333;
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Form */
+/* Form Styles */
 form {
     display: flex;
     flex-direction: column;
 }
 
-/* Form Group */
 .form-group {
     margin-bottom: 15px;
     position: relative;
 }
 
-/* Label */
 label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-/* Textarea */
-textarea {
+textarea, input[type="text"], input[type="file"] {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
     box-sizing: border-box;
-    resize: vertical; /* Allow vertical resizing only */
 }
 
-/* Input Fields */
-input[type="text"],
-input[type="file"],
-input[type="datetime-local"] {
-    width: 95%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-    transition: border 0.3s ease;
+textarea {
+    resize: vertical;
 }
 
-/* Placeholder Color */
-input::placeholder,
-textarea::placeholder {
-    color: #999;
+input[type="file"] {
+    padding: 10px;
 }
 
-/* Hover Effects */
-input[type="text"]:hover,
-input[type="datetime-local"]:hover,
-textarea:hover {
-    border-color: #333;
-}
-
-/* Focus Effects */
-input[type="text"]:focus,
-input[type="datetime-local"]:focus,
-textarea:focus {
-    border-color: #333;
-    outline: none;
-}
-
-/* Button */
 button {
     display: block;
     width: 100%;
@@ -114,10 +82,71 @@ button:hover {
     color: #555;
 }
 
+/* Hashtag Styles */
+#hashtagContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.hashtag {
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.hashtag button {
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0 5px;
+    margin-left: 5px;
+}
+
+#addHashtag {
+    width: auto;
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Media Preview Styles */
+#mediaPreview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#mediaPreview img, #mediaPreview video {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Flatpickr Customization */
+.flatpickr-calendar {
+    background: #fff;
+    box-shadow: 0 3px 13px rgba(0,0,0,0.08);
+}
+
+.flatpickr-day.selected {
+    background: #333;
+    border-color: #333;
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
     .container {
         width: 90%;
+        margin: 20px auto;
     }
 
     button {
@@ -125,73 +154,8 @@ button:hover {
         padding: 12px;
     }
 
-    input[type="text"],
-    input[type="file"],
-    input[type="datetime-local"],
-    textarea {
+    textarea, input[type="text"], input[type="file"] {
         font-size: 14px;
         padding: 10px;
     }
 }
-
-
-
-/* body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px;
-}
-
-h1 {
-    color: #333;
-    text-align: center;
-}
-
-form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="file"],
-input[type="datetime-local"],
-textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #555;
-} */

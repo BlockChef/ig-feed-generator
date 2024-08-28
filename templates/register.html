@@ -5,31 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IG Feed Generator</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
 </head>
 <body>
     <div class="container">
         <h1>Instagram Post Generator</h1>
-        <form method="POST" enctype="multipart/form-data">
+        <form method="POST" enctype="multipart/form-data" id="postForm">
             <div class="form-group">
                 <label for="caption">Caption:</label>
                 <textarea id="caption" name="caption" rows="4" maxlength="2200" placeholder="Enter your caption here..." required></textarea>
-                <small id="charCount">Max 2200 characters</small>
+                <small id="charCount">0 / 2200 characters</small>
             </div>
             <div class="form-group">
                 <label for="hashtags">Hashtags:</label>
-                <input type="text" id="hashtags" name="hashtags" placeholder="#example #hashtags" required>
+                <input type="text" id="hashtagInput" placeholder="Enter a hashtag">
+                <button type="button" id="addHashtag">Add Hashtag</button>
+                <div id="hashtagContainer"></div>
+                <input type="hidden" id="hashtags" name="hashtags">
             </div>
             <div class="form-group">
-                <label for="image">Image:</label>
-                <input type="file" id="image" name="image" accept="image/*" required>
-               
+                <label for="media">Media (Max 10 files, images or videos only):</label>
+                <input type="file" id="media" name="media" accept="image/*, video/*" multiple required>
+                <div id="mediaPreview"></div>
             </div>
             <div class="form-group">
                 <label for="schedule">Schedule Post:</label>
-                <input type="datetime-local" id="schedule" name="schedule">
+                <input type="text" id="schedule" name="schedule" placeholder="Select date and time">
             </div>
             <button type="submit">Generate Post</button>
         </form>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
