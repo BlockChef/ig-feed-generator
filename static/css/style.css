@@ -1,4 +1,142 @@
+/* Global Styles */
 body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background color for the whole page */
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff; /* White background for the form container */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fffbf0; /* Soft light yellow background for the container */
+}
+
+/* Header */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* Label */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="file"],
+input[type="datetime-local"] {
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+/* Placeholder Color */
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+/* Hover Effects */
+input[type="text"]:hover,
+input[type="datetime-local"]:hover,
+textarea:hover {
+    border-color: #333;
+}
+
+/* Focus Effects */
+input[type="text"]:focus,
+input[type="datetime-local"]:focus,
+textarea:focus {
+    border-color: #333;
+    outline: none;
+}
+
+/* Button */
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #555;
+}
+
+/* Character Counter */
+#charCount {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    input[type="text"],
+    input[type="file"],
+    input[type="datetime-local"],
+    textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+
+/* body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -56,4 +194,4 @@ button {
 
 button:hover {
     background: #555;
-}
+} */
