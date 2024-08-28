@@ -12,7 +12,7 @@ This is a Flask web application that generates Instagram feeds.
 
 1. Clone the repository:
    ```
-   git clone https://github.com/mukund1712/ig-feed-generator.git
+   git clone https://github.com/BlockChef/ig-feed-generator.git
    ```
 
 2. Change to the project directory:
