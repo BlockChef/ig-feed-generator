@@ -2,7 +2,7 @@
 name = "ig-feed-generator"
 version = "0.1.0"
 description = ""
-authors = ["mukund1712 <143148571+mukund1712@users.noreply.github.com>"]
+authors = ["mukund1712 <143148571+mukund1712@users.noreply.github.com>", "abodh788 abodh.gajurel100@gmail.com"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
