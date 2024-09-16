@@ -1,2 +1,7 @@
 .env
 
+__pycache__
+
+uploads
+
+flask_session
