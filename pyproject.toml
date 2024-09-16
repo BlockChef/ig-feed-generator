@@ -11,6 +11,7 @@ Flask = "^3.0.3"
 pre-commit = "^3.8.0"
 openai = "^1.43.0"
 python-dotenv = "^1.0.1"
+flask-session = "^0.8.0"
 
 
 [tool.poetry.group.dev.dependencies]

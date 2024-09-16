@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Instagram Post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/preview.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Preview Instagram Post</h1>
+        <div class="image-slideshow">
+            {% for media in post_data.media %}
+            <div>
+                {% if media.endswith(('.jpg', '.jpeg', '.png', '.gif')) %}
+                <img src="{{ url_for('uploaded_file', filename=media) }}" alt="Uploaded media">
+                {% else %}
+                <video controls>
+                    <source src="{{ url_for('uploaded_file', filename=media) }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="content">
+            <h2>Caption:</h2>
+            <p>{{ post_data.caption }}</p>
+        </div>
+        <div class="actions">
+            <button id="reviseBtn">Revise</button>
+            <button id="approveBtn">Approve</button>
+        </div>
+        <div id="revisionForm" style="display: none;">
+            <h2>Provide Revision Suggestions:</h2>
+            <textarea id="suggestionInput" rows="4" placeholder="Enter your revision suggestions..."></textarea>
+            <button id="submitRevision">Submit Revision</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="{{ url_for('static', filename='js/preview.js') }}"></script>
+</body>
+</html>

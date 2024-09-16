@@ -77,17 +77,26 @@ flatpickr("#schedule", {
     minDate: "today"
 });
 
-// Form validation
-const form = document.getElementById('postForm');
-form.addEventListener('submit', function(e) {
-    if (!caption.value.trim()) {
-        e.preventDefault();
-        alert('Please enter a caption.');
-    } else if (hashtags.size === 0) {
-        e.preventDefault();
-        alert('Please add at least one hashtag.');
-    } else if (mediaInput.files.length === 0) {
-        e.preventDefault();
-        alert('Please select at least one media file.');
-    }
+
+$('#postForm').on('submit', function(e) {
+    e.preventDefault();
+    var formData = new FormData(this);
+
+    $.ajax({
+        url: '/',
+        type: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(response) {
+            if (response.status === 'success') {
+                window.location.href = response.redirect;
+            } else {
+                alert('Error: ' + response.message);
+            }
+        },
+        error: function(xhr, status, error) {
+            alert('An error occurred: ' + error);
+        }
+    });
 });
